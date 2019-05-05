@@ -66,6 +66,7 @@ ROBOTSTXT_OBEY = True
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'DataCrawler.pipelines.DatacrawlerPipeline': 400,
+    # 'DataCrawler.pipelines.GazpromPipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

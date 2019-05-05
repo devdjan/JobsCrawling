@@ -7,8 +7,7 @@
 
 import scrapy
 
-# items for hrforecast
-class HRforecastsItem(scrapy.Item):
+class CrawlersItem(scrapy.Item):
     job_url = scrapy.Field()
     job_title = scrapy.Field()
     job_description = scrapy.Field()
@@ -16,13 +15,5 @@ class HRforecastsItem(scrapy.Item):
     crawled_date = scrapy.Field()
     posted_date = scrapy.Field()
 
-# items for gazprom
-class GazpromItem(scrapy.Item):
-    job_url = scrapy.Field()
-    job_title = scrapy.Field()
-    job_description = scrapy.Field()
-    company_name = scrapy.Field()
-    crawled_date = scrapy.Field()
-    posted_date = scrapy.Field()
 
 

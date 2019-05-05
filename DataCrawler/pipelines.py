@@ -10,7 +10,7 @@ class DatacrawlerPipeline(object):
 
     def open_spider(self, spider):
         hostname = 'localhost'
-        username = 'manager'  # the username when you create the database
+        username = 'manager'     # the username when you create the database
         password = 'hrforecast'  # change to your password
         database = 'jobs_hrforecast'
         self.connection = psycopg2.connect(host=hostname, user=username, password=password, dbname=database)
