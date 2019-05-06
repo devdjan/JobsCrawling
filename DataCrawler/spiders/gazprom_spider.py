@@ -24,8 +24,7 @@ class GazpromSpider(CrawlSpider):
         items['job_description'] = response.css('div.job-info > p::text').getall()
         items['company_name'] = response.css('dl.job-params > dd > a::text').get()
         items['crawled_date'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
-        # items['posted_date'] = []
+        items['posted_date'] = response.css('dl.job-params > dd:nth-child(10) > time::attr(datetime)').get()
 
         return items
 
