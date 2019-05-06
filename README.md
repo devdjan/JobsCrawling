@@ -1,5 +1,5 @@
 # JobsCrawling
-The project was create to parse data related to job (title, description, etc.) from sites:
+The project was create to parse data like (title, description, etc.) from the sites:
 * `https://www.hrforecast.de/company/career/` and  `https://www.gazpromvacancy.ru/jobs/`
 
 And saving data to the Postgres database.
@@ -23,8 +23,11 @@ python3 get-pip.py
 pip3 install virtualenv
 ```
 
-4. Install DB. Follow this [link](https://postgresapp.com/) OR
-`pip install postgres`
+4. Install DB. 
+Follow this [link](https://postgresapp.com/) OR
+```
+pip install postgres
+```
 
 5. Setup the VirualEnviroment for the project
 ```
@@ -64,7 +67,7 @@ posted_date VARCHAR(255)
 
 
 # Running Spiders
-To run spiders, just execute following commands in project directory:
+To run spiders, just execute following commands in project directory `/DataCrawler/spiders/`:
 ```
 scrapy runspider hr_spider.py
 scrapy runspider gazprom_spider.py
@@ -80,9 +83,13 @@ Data you can find in database. Connect to db as manager:
 psql jobs_hrforecast manager
 ```
 Then check for tables:
-`\dt`
+```
+\dt
+```
 Select all data from the table:
-`SELECT * FROM jobs_data`
+```
+SELECT * FROM jobs_data
+```
 
 
 
