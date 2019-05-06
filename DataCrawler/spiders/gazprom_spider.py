@@ -18,7 +18,6 @@ class GazpromSpider(CrawlSpider):
     def parse_data(self, response):
 
         items = CrawlersItem()
-
         items['job_url'] = response.url
         items['job_title'] = response.css('h1.job-title::text').get()
         items['job_description'] = response.css('div.job-info > p::text').getall()

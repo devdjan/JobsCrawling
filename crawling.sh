@@ -1,0 +1,2 @@
+scrapy crawl hr_spider
+scrapy crawl gazprom_spider
